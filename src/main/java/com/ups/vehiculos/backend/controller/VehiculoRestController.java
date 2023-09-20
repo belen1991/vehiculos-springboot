@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
  */
 @RestController
 public class VehiculoRestController {
-	@GetMapping("")
+	@GetMapping("api/addVehiculos")
 	public ResponseEntity<?> getRetornaVehiculos(HttpServletRequest headers, @Valid @RequestBody Auto autoRequest) {
 		Auto auto = new Auto();
 		auto.setId(1);

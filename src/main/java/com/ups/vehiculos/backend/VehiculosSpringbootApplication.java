@@ -1,20 +1,16 @@
 package com.ups.vehiculos.backend;
 
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class VehiculosSpringbootApplication implements CommandLineRunner {
+@EntityScan("com.ups.vehiculos.backend.model")
+public class VehiculosSpringbootApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(VehiculosSpringbootApplication.class, args);
-	}
-	@Override
-	public void run(String... args) throws Exception {
-		// TODO Auto-generated method stub
-		// Llamamos a nuestro metodo deplarado en la interfaz 
-		
 	}
 
 }
