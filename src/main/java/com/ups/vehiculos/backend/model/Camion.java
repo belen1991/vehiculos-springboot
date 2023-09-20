@@ -6,7 +6,7 @@ public class Camion extends Vehiculo {
 
     @Override
     public double obtenerCostoMatricular() {
-        return (super.getAnio() / super.getCilindraje()) * (this.capacidadCajon * 4 );
+        return (super.getAnio() / super.getCilindraje()) * (this.capacidadCajon );
     }
 
     public int getCapacidadCajon() {
