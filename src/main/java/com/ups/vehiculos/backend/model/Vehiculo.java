@@ -1,38 +1,17 @@
 package com.ups.vehiculos.backend.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "vehiculo")
-public class Vehiculo {
+public abstract class Vehiculo {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private int id;
-  
-    @Column(name = "placa")
     private String placa;
-  
-    @Column(name = "modelo")
     private String modelo;
-
-    @Column(name = "marca")
     private String marca;
-  
-    @Column(name = "anio")
     private int anio;
-
-    @Column(name = "cilindraje")
-    private float cilindraje;
-  
-    @Column(name = "valor")
+    private int cilindraje;
     private float valor;
+
+    public abstract double obtenerCostoMatricular();
 
     public int getId() {
         return id;
@@ -74,11 +53,11 @@ public class Vehiculo {
         this.anio = anio;
     }
 
-    public float getCilindraje() {
+    public int getCilindraje() {
         return cilindraje;
     }
 
-    public void setCilindraje(float cilindraje) {
+    public void setCilindraje(int cilindraje) {
         this.cilindraje = cilindraje;
     }
 
