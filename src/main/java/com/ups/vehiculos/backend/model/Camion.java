@@ -2,11 +2,11 @@ package com.ups.vehiculos.backend.model;
 
 public class Camion extends Vehiculo {
 
-    public int capacidadCajon;
+    public int capacidadCajon = 4500;
 
     @Override
     public double obtenerCostoMatricular() {
-        return (super.getAnio() / super.getCilindraje()) * (this.capacidadCajon );
+        return (this.getAnio() * this.getCilindraje()) * (this.capacidadCajon );
     }
 
     public int getCapacidadCajon() {

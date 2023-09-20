@@ -2,11 +2,11 @@ package com.ups.vehiculos.backend.model;
 
 public class Camioneta extends Vehiculo {
 
-    public int capacidadBalde;
+    public int capacidadBalde = 1050;
 
     @Override
     public double obtenerCostoMatricular() {
-        return (super.getAnio() / super.getCilindraje()) * (this.capacidadBalde * 4 );
+        return (this.getAnio() * this.getCilindraje()) * (this.capacidadBalde * 4 );
     }
 
     public int getCapacidadBalde() {
