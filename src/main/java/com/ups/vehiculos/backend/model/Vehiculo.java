@@ -1,6 +1,5 @@
 package com.ups.vehiculos.backend.model;
 
-
 public abstract class Vehiculo {
 
     private int id;
