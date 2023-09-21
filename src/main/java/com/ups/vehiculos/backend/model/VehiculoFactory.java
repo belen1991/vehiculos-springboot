@@ -1,8 +1,5 @@
 package com.ups.vehiculos.backend.model;
 
-import org.hibernate.annotations.Comment;
-
-@Comment(value = "")
 public class VehiculoFactory extends VehiculoAbstractFactory {
 
     @Override

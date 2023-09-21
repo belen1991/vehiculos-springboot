@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ups.vehiculos.backend.model.Auto;
-import com.ups.vehiculos.backend.model.TipoVehiculo;
 import com.ups.vehiculos.backend.model.VehiculoFactory;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -27,7 +26,6 @@ import jakarta.validation.Valid;
 /**
  * jnaulas
  */
-//@CrossOrigin(origins = {"http://localhost:3000/api/prueba"})
 @CrossOrigin(origins = {"*"})
 @Controller
 @RequestMapping("/api")
