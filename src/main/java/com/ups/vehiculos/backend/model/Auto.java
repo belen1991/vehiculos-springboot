@@ -2,11 +2,11 @@ package com.ups.vehiculos.backend.model;
 
 public class Auto extends Vehiculo {
 
-    public int capacidadMaletero;
+    public int capacidadMaletero = 500;
 
     @Override
     public double obtenerCostoMatricular() {
-        return (super.getAnio() / super.getCilindraje()) * (this.getCapacidadMaletero() / 50);
+        return (this.getAnio() * this.getCilindraje()) * (this.getCapacidadMaletero() / 50);
     }
 
     public int getCapacidadMaletero() {
