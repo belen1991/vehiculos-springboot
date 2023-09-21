@@ -3,6 +3,9 @@
  */
 package com.ups.vehiculos.backend.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -52,12 +55,14 @@ public class VehiculoRestController {
 	@PostMapping("/addVehiculos")
 	public ResponseEntity<?> getRetornaVehiculos(HttpServletRequest headers, @Valid @RequestBody Auto autoRequest) {
 		Auto auto = new Auto();
+		List<Auto> listAutos = new ArrayList<>();
 		auto.setId(1);
 		auto.setAnio(2005);
 		auto.setCilindraje(1400);
 		auto.setMarca("Chevrolet");
 		//return ResponseEntity.ok(vehiculoFactory.crearVehiculoFactory(TipoVehiculo.AUTO));
-		return ResponseEntity.ok(auto);
+		listAutos.add(auto);
+		return ResponseEntity.ok(listAutos);
 	}
 	
     @GetMapping("/formulario")
