@@ -56,7 +56,8 @@ public class VehiculoRestController {
 		auto.setAnio(2005);
 		auto.setCilindraje(1400);
 		auto.setMarca("Chevrolet");
-		return ResponseEntity.ok(vehiculoFactory.crearVehiculoFactory(TipoVehiculo.AUTO));
+		//return ResponseEntity.ok(vehiculoFactory.crearVehiculoFactory(TipoVehiculo.AUTO));
+		return ResponseEntity.ok(auto);
 	}
 	
     @GetMapping("/formulario")
